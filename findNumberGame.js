@@ -30,6 +30,7 @@ btn.addEventListener("click", function(){
             h2.innerText=`Congrats, you found the chosen number ${number} on your ${11-Number(try1.innerText)}. attempt`;
             attemps.style.display = "none";
             reset.style.display = "block";
+            btn.style.display = "none";
             guess.value = "";
            
             result.style.color = "green";
@@ -76,6 +77,7 @@ btn.addEventListener("click", function(){
                 h2.innerText= `Sorry, you failed. The number is ${number}`;
                 attemps.style.display = "none";
                 reset.style.display = "block";
+                btn.style.display = "none";
                 guess.value=""
             }
 
@@ -112,6 +114,7 @@ btn.addEventListener("click", function(){
             h2.innerText= `Sorry, you failed. The number is ${number}`;
             attemps.style.display = "none";
             reset.style.display = "block";
+            btn.style.display = "none";
             guess.value=""
             }
 
@@ -146,6 +149,7 @@ btn.addEventListener("click", function(){
 
 
 reset.addEventListener("click", function(){
+    location.reload();
     try1.innerText=10;
     attemps.style.display = "flex";
     result.style.display = "none";
